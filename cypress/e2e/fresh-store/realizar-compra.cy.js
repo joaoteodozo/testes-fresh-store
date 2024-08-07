@@ -11,7 +11,7 @@ describe('Realizar fluxo de compra com os três tipos de pagamentos diferentes',
         cy.visit('https://qa-fresh-store.vercel.app')
     })
   
-    it.only('Realiza uma compra corretamente com cartão de crédito', () => {
+    it('Realiza uma compra corretamente com cartão de crédito', () => {
         cy.contains('a', 'clique aqui').click();
         cy.get('input[id="register-fullname"]').type('João Teodozo');
         cy.get('input[id="register-username"]').type(Cypress.env('username'));
