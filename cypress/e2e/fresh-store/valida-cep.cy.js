@@ -4,7 +4,7 @@ describe('Validações no carrinho de compras', () => {
         cy.visit('https://qa-fresh-store.vercel.app')
     })
   
-    it('Valida se a soma dos produtos no carrinho está correta', () => {
+    it('Valida se caso o CEP seja inválido retorna a mensagem de erro', () => {
         cy.contains('a', 'clique aqui').click();
         cy.get('input[id="register-fullname"]').type('João Teodozo');
         cy.get('input[id="register-username"]').type(Cypress.env('username'), {log: false});
